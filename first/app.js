@@ -1,31 +1,31 @@
-//Create some arrays
-const numbers = [1, 2, 3, 4, 5];
-const numbers2 = new Array(6, 8, 7, 9);
-//MUTATING ARRAYS
-//add to end
-numbers.push(6);
-//add to start
-numbers.unshift(0);
-//remove last
-numbers.pop();
-//remove first
-numbers.shift();
-//remove between
-numbers.splice(1, 3);
-//reverse
-numbers.reverse();
-//concatenate arrays  [numbers + numbers2]
-let val = numbers.concat(numbers2);
-//sorting numbers
-val = numbers2.sort(); //sorting alphabetically !!
-val = numbers2.sort(function (x, y) {
-  return x - y;
-});
-//find first occurrence
-function under4(num) {
-  return num < 50;
-}
-val = numbers2.find(under4);
+const person = {
+  firstName: "Steve",
+  lastName: "Smith",
+  age: 30,
+  email: "steve@aol.com",
+  hobbies: ["music", "sports"],
+  address: { city: "Miami", state: "FL" },
+  getBirthYear: function () {
+    return 2021 - this.age;
+  },
+};
 
-console.log(numbers);
+let val = person;
+
+//get specific value
+val = person.firstName;
+val = person["lastName"];
+val = person.address.city;
+val = person.address["city"];
+val = person.getBirthYear();
 console.log(val);
+
+const people = [
+  { name: "John", age: 30 },
+  { name: "Mike", age: 23 },
+  { name: "Nancy", age: 22 },
+];
+
+for (let i = 0; i < people.length; i++) {
+  console.log(people[i].name);
+}
