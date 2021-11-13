@@ -1,27 +1,38 @@
-let val;
+//switch
+const color = "blue";
 
-const today = new Date();
-let birthday = new Date("9-10-1981 11:25");
+switch (color) {
+  case "red":
+    console.log("Color is red");
+    break;
+  case "blue":
+    console.log("Color is blue");
+    break;
+  default:
+    console.log("Color is not red or blue");
+    break;
+}
 
-birthday = new Date("Septembeer 10 1981");
-birthday = new Date("9/10/1982");
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Thuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 6:
+    day = "Saturday";
+    break;
+  default:
+    day = "aga";
+    break;
+}
 
-val = today;
-val = birthday;
-val = today.getMonth(); //0 = January!
-val = today.getDate(); //1-31
-val = today.getDay(); //1 = Monday
-val = today.getFullYear();
-val = today.getHours();
-val = today.getMinutes();
-val = today.getSeconds();
-val = today.getMilliseconds();
-val = today.getTime(); // time passed since 1th January 1970 as seconds
-
-birthday.setMonth(2); //MARCH!
-birthday.setDate(12);
-birthday.setFullYear(1985)
-
-console.log(val);
-console.log(birthday);
-console.log(typeof val);
+console.log(day)
